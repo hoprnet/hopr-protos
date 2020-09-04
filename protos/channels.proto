@@ -12,7 +12,9 @@ service Channels {
 message GetChannelsRequest {}
 
 message GetChannelsResponse {
-  repeated string channels = 1;
+  repeated GetChannelDataResponse channels = 1;
+  string total_balance = 2;
+  string my_total_balance = 3;
 }
 
 
@@ -30,7 +32,8 @@ message GetChannelDataResponse {
   }
 
   State state = 1;
-  string balance = 2;
+  string total_balance = 2;
+  string my_balance = 3;
 }
 
 
